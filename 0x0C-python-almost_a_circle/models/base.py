@@ -144,7 +144,7 @@ class Base:
                               for d in list_dicts]
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
-            return []
+[O            return []
 
     @staticmethod
     def draw(list_rectangles, list_squares):
@@ -186,3 +186,4 @@ class Base:
             turt.hideturtle()
 
         turtle.exitonclick()
+

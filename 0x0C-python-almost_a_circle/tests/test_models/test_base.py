@@ -209,7 +209,7 @@ class TestBase_save_to_file(unittest.TestCase):
         Square.save_to_file([s])
         with open("Square.json", "r") as f:
             self.assertTrue(len(f.read()) == 39)
-[O
+
     def test_save_to_file_None(self):
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
@@ -547,3 +547,4 @@ class TestBase_load_from_file_csv(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+

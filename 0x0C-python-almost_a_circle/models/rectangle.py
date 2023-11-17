@@ -67,7 +67,7 @@ class Rectangle(Base):
         self.__x = value
 
     @property
-OBOBOB    def y(self):
+    def y(self):
         """Set/get the y coordinate of the Rectangle."""
         return self.__y
 
@@ -86,7 +86,7 @@ class Rectangle(Base):
     def display(self):
         """Print the Rectangle using the `#` character."""
         if self.width == 0 or self.height == 0:
-OBOBOB            print("")
+            print("")
             return
 
         [print("") for y in range(self.y)]
@@ -155,4 +155,5 @@ class Rectangle(Base):
         """Return the print() and str() representation of the Rectangle."""
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                        self.x, self.y,
-                            self.width, self.height)
+                                                       self.width, self.height)
+

@@ -162,7 +162,7 @@ class TestSquare_size(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(0, 2)
 
-
+[O
 class TestSquare_x(unittest.TestCase):
     """Unittests for testing initialization of Square x attribute."""
 
@@ -658,3 +658,4 @@ class TestSquare_to_dictionary(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
