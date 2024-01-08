@@ -1,10 +1,9 @@
-Writing JavaScript Code
-
-*Variables
-*Data Types
-*Operators
-*Operator Precedence
-*Functions
-*Objects and Arrays
-*Module patterns
-*Modern JS
+Writing JavaScript:
+-Variables
+-Data Types
+-Operators
+-Functions
+-Operator precedence
+-Module patterns
+-Var,Let and Const
+-Modern JS
