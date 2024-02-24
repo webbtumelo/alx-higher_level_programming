@@ -1,19 +1,18 @@
 #!/usr/bin/python3
+"""Sends a request to a given URL and displays the response body
+  - Handles HTTP errors.
+"""
+import sys
+import urllib.error
+import urllib.request
 
-from sys import argv
-from urllib.request import Request, urlopen
-from urllib.error import URLError
 
 if __name__ == "__main__":
-        req = Request(argv[1])
+    url = sys.argv[1]
 
-        try:
-                with urlopen(req) as response:
-                        html = response.read().decode('utf-8')
-
-        except URLError as e:
-                if hasattr(e, 'code'):
-                        print('Error code:', e.code)
-
-        else:
-                print(html)
+    request = urllib.request.Request(url)
+    try:
+        with urllib.request.urlopen(request) as response:
+            print(response.read().decode("ascii"))
+    except urllib.error.HTTPError as e:
+        print("Error code: {}".format(e.code))
