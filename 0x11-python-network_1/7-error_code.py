@@ -1,16 +1,16 @@
 #!/usr/bin/python3
-
-import requests
+"""Sends a request to the URL and displays the response body
+  - Handles HTTP errors.
+"""
 import sys
+import requests
+
 
 if __name__ == "__main__":
+    url = sys.argv[1]
 
-    try:
-        html = requests.get(sys.argv[1])
-        html.raise_for_status()
-
-    except requests.exceptions.HTTPError:
-        print("Error code: {}".format(html.status_code))
-
+    response = requests.get(url)
+    if response.status_code >= 400:
+        print("Error code: {}".format(response.status_code))
     else:
-        print(html.text)
+        print(response.text)
